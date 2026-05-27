@@ -1,6 +1,6 @@
 # Encrypts a phrase or word with Caesar Cipher
 class CaesarCipher
-  def encrypt_word(string, key = 0, shift = "right")
+  def encrypt_string(string, key = 0, shift = "right")
     string.split.map do |word|
       word.chars.map do |letter|
         # Only apply encryption if the character is a letter
@@ -30,4 +30,4 @@ class CaesarCipher
 end
 
 cipher = CaesarCipher.new
-puts cipher.encrypt_word("What a string!", 5)
+puts cipher.encrypt_string("What a string!", 5)
